@@ -1,33 +1,125 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-  pointer-events: none;
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+main{
+  background-image: url('https://blackrockdigital.github.io/startbootstrap-agency/img/header-bg.jpg');
+  background-size: 110vw;
+  background-repeat: no-repeat;
+  width: 100vw;
+  height: 100vh;
   color: white;
+  font-family: 'Montserrat', sans-serif;
+  z-index: 1;
+  position: relative;
+}
+header{
+  width: 90vw;
+  margin-left: 5vw;
+  margin-right: 5vw;
+  height: 10vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 3;
+  position: absolute;
+  background: #212529;
+}
+h1{
+  color: #fed135;
+  font-family: 'Kaushan Script', cursive;
+  font-size: 28px;
+  line-height: 42px;
+  z-index: 4;
+}
+.nav-links{
+  padding-left: 2vw;
+  font-size: 14px;
+  line-height: 22px;
+  z-index: 4;
+}
+h2:hover{
+  color: #fed135;
+}
+div{
+  width: 20vw;
+}
+.menu-button {
+  background-color: #fed135;
+  color: white;
+  width: 8vw;
+  height: 28px;
+  display: none;
+  z-index: 4;
+}
+.ham{
+  height: 2vh;
+  width: 2vw;
+}
+.drop-down-menu, .drop-down-menu-open, .drop-down-menu-close {
+  top: 5vh;
+  right:0%;
+  width: 100vw;
+  height: 50vh;
+  background: #212529;
+  position: fixed;
+  z-index: 2;
+}
+.drop-down-menu{
+  display: none;
+}
+.drop-down-menu-open{
+  animation: openMenu .5s forwards linear;
+}
+.drop-down-menu-close{
+  animation: closeMenu .5s forwards linear;
 }
 
-.App-link {
-  color: #61dafb;
+.drop-down-buttons, .drop-down-buttons-open, .drop-down-buttons-close {
+  top: 5vh;
+  /* top: -8vh; */
+  left: 5vw;
+  position: relative;
+  z-index: -1;
 }
-
-@keyframes App-logo-spin {
+.drop-down-buttons{
+  display: none;
+}
+.drop-down-buttons-open{
+  animation: openButton .5s forwards linear;
+}
+.drop-down-buttons-close{
+  animation: closeButton .5s forwards linear;
+  display: none;
+}
+@keyframes openButton {
   from {
-    transform: rotate(0deg);
+      height: 0px;
+  }
+  to{
+      height: 8vh;
+  }
+}
+@keyframes closeButton {
+  from {
+      height: 8vh;
   }
   to {
-    transform: rotate(360deg);
+      height: 0px;
+  }
+}
+@keyframes openMenu {
+  from {
+      height: 0px;
+  }
+  to{
+      height: 50vh;
+  }
+}
+@keyframes closeMenu {
+  from {
+      height: 50vh;
+  }
+  30% {
+    font-size: 0%;
+  }
+  to {
+      height: 0px;
   }
 }

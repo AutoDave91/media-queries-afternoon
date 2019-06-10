@@ -1,0 +1,9 @@
+@media (max-width: 990px){
+    .menu-button{
+        display: flex;
+        align-items: center;
+    }
+    .nav-links{
+        display: none;
+    }
+}
